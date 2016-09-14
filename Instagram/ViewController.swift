@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate ,UINavigationControllerDelegate{
     
+    @IBOutlet var shareButton: UIButton!
+    
+    @IBAction func shareButtonClicked(sender: AnyObject) {
+        
+        Ostetso.shareImage(imageView.image)
+    }
+    
+    
     var picker: UIImagePickerController!
     
 
@@ -33,6 +41,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate ,UINavig
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
             
             imageView.image = pickedImage
+            shareButton.enabled = true
             
             
         }

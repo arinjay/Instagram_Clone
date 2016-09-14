@@ -30,14 +30,32 @@
                                     <action selector="chooseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SFt-hW-aa8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                         InstApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxN-Fo-6LS">
+                                <rect key="frame" x="10" y="20" width="357" height="30"/>
+                                <color key="backgroundColor" red="0.59685399438932218" green="0.95862901210784912" blue="0.76253203144366788" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjb-Ht-pBu">
+                                <rect key="frame" x="312" y="87" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xe-OZ-ZNR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Tth-FY-f4R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="0oe-ue-NtG"/>
                             <constraint firstAttribute="trailing" secondItem="Tth-FY-f4R" secondAttribute="trailing" constant="8" id="4bb-cT-a6J"/>
+                            <constraint firstItem="BxN-Fo-6LS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="4rw-Od-ASS"/>
                             <constraint firstAttribute="trailing" secondItem="d71-d0-loP" secondAttribute="trailing" constant="266" id="5dD-yV-o8M"/>
                             <constraint firstItem="Tth-FY-f4R" firstAttribute="top" secondItem="d71-d0-loP" secondAttribute="bottom" constant="54" id="9YE-lN-0Po"/>
                             <constraint firstItem="Tth-FY-f4R" firstAttribute="top" secondItem="d71-d0-loP" secondAttribute="bottom" constant="54" id="BkG-9i-6ah"/>
+                            <constraint firstItem="d71-d0-loP" firstAttribute="top" secondItem="BxN-Fo-6LS" secondAttribute="bottom" constant="37" id="DwO-fF-DMT"/>
+                            <constraint firstItem="BxN-Fo-6LS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Et5-Xw-dx6"/>
+                            <constraint firstAttribute="trailing" secondItem="BxN-Fo-6LS" secondAttribute="trailing" constant="8" id="IQi-zE-VvL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tth-FY-f4R" secondAttribute="bottom" constant="8" id="Qbu-4n-bGl"/>
                             <constraint firstItem="d71-d0-loP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="67" id="jtp-qz-vHr"/>
                             <constraint firstItem="d71-d0-loP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="xes-pk-XO8"/>
@@ -46,6 +64,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="Tth-FY-f4R" id="3bW-0s-d0G"/>
+                        <outlet property="shareButton" destination="qjb-Ht-pBu" id="dkm-gB-RW2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
