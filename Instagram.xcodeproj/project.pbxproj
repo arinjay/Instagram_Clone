@@ -14,6 +14,8 @@
 		12EA34381D893EFE003EBCCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12EA34361D893EFE003EBCCC /* LaunchScreen.storyboard */; };
 		12EA34431D893EFE003EBCCC /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA34421D893EFE003EBCCC /* InstagramTests.swift */; };
 		12EA344E1D893EFE003EBCCC /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EA344D1D893EFE003EBCCC /* InstagramUITests.swift */; };
+		12EA345E1D893F76003EBCCC /* Ostetso.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 12EA345C1D893F76003EBCCC /* Ostetso.bundle */; };
+		12EA345F1D893F76003EBCCC /* Ostetso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EA345D1D893F76003EBCCC /* Ostetso.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		12EA34491D893EFE003EBCCC /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EA344D1D893EFE003EBCCC /* InstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITests.swift; sourceTree = "<group>"; };
 		12EA344F1D893EFE003EBCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12EA345C1D893F76003EBCCC /* Ostetso.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Ostetso.bundle; sourceTree = "<group>"; };
+		12EA345D1D893F76003EBCCC /* Ostetso.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Ostetso.framework; sourceTree = "<group>"; };
+		12EA34601D894072003EBCCC /* HeaderBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderBridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12EA345F1D893F76003EBCCC /* Ostetso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 				12EA34411D893EFE003EBCCC /* InstagramTests */,
 				12EA344C1D893EFE003EBCCC /* InstagramUITests */,
 				12EA342B1D893EFE003EBCCC /* Products */,
+				12EA345B1D893F76003EBCCC /* ostetso */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +110,7 @@
 				12EA34341D893EFE003EBCCC /* Assets.xcassets */,
 				12EA34361D893EFE003EBCCC /* LaunchScreen.storyboard */,
 				12EA34391D893EFE003EBCCC /* Info.plist */,
+				12EA34601D894072003EBCCC /* HeaderBridge.h */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -123,6 +131,15 @@
 				12EA344F1D893EFE003EBCCC /* Info.plist */,
 			);
 			path = InstagramUITests;
+			sourceTree = "<group>";
+		};
+		12EA345B1D893F76003EBCCC /* ostetso */ = {
+			isa = PBXGroup;
+			children = (
+				12EA345C1D893F76003EBCCC /* Ostetso.bundle */,
+				12EA345D1D893F76003EBCCC /* Ostetso.framework */,
+			);
+			path = ostetso;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +249,7 @@
 				12EA34381D893EFE003EBCCC /* LaunchScreen.storyboard in Resources */,
 				12EA34351D893EFE003EBCCC /* Assets.xcassets in Resources */,
 				12EA34331D893EFE003EBCCC /* Main.storyboard in Resources */,
+				12EA345E1D893F76003EBCCC /* Ostetso.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +417,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ostetso",
+				);
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Instagram/HeaderBridge.h;
 			};
 			name = Debug;
 		};
@@ -410,10 +434,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ostetso",
+				);
 				INFOPLIST_FILE = Instagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Instagram/HeaderBridge.h;
 			};
 			name = Release;
 		};
